@@ -1,0 +1,11 @@
+---
+- name: 웹서버 설치
+  hosts: all
+  become: yes
+  vars: 
+   dist_name: "{{ 'amazon' if ansible_distribution == 'Amazon'
+                   else 'ubuntu' if ansible_distribution == 'Ubuntu'
+                }}" 
+  tasks: 
+    - name: 웹서버 설치 야물 파일
+      include_tasks: "{{ dist_name }}.yml"  
