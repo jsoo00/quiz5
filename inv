@@ -1,0 +1,11 @@
+[amazon]
+amazon1 ansible_host=172.31.1.245
+amazon2 ansible_host=172.31.9.153
+
+[ubuntu]
+ubuntu1 ansible_host=172.31.12.76
+ubuntu2 ansible_host=172.31.9.213
+
+[quiz2:children] 
+amazon
+ubuntu
